@@ -247,7 +247,11 @@ textarea.field{min-height:124px;line-height:1.5;resize:none}
 
   var params = new URLSearchParams(location.search);
   var dinner = params.get('d') || 'test';
-  var KEY = 'bb-checkin:' + dinner;
+  // Answers saved on this phone live under KEY. Raising a dinner's number in RESET makes every phone start that dinner fresh.
+  // bb1 is at 2 because Jamie's phone kept a test check-in from 24 Nov.
+  var RESET = { bb1: 2 };
+  var KEY = 'bb-checkin:' + dinner + (RESET[dinner] ? ':v' + RESET[dinner] : '');
+  try { if (RESET[dinner]) localStorage.removeItem('bb-checkin:' + dinner); } catch (e) {}
   var $ = function (id) { return document.getElementById(id); };
 
   // ---- saved state on this phone ----

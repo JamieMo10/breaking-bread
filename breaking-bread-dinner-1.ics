@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Van Downtown Crew//Breaking Bread//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-TIMEZONE:America/Vancouver
+BEGIN:VEVENT
+UID:breaking-bread-bb1@van-downtown-crew
+DTSTAMP:20261125T002856Z
+DTSTART:20261127T183000
+DTEND:20261127T203000
+SUMMARY:Breaking Bread\, dinner 1
+LOCATION:Jamie's place (address in the crew chat)
+DESCRIPTION:Van Downtown Crew\, Actualize. Bring one problem you're workin
+ g on. You'll check in at the table with the QR card\, which takes about a
+  minute.
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT2H
+DESCRIPTION:Breaking Bread\, dinner 1 in two hours
+END:VALARM
+END:VEVENT
+END:VCALENDAR
